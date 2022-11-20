@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>GISProject - analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">GISProject</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./intro.qmd">Introduction</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./methodology.qmd">Methodology</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./analysis.html" aria-current="page">Analysis</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./finding.qmd">Results &amp; Discussion</a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">About</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#analysis-methods-and-recommendations" id="toc-analysis-methods-and-recommendations" class="nav-link active" data-scroll-target="#analysis-methods-and-recommendations"><u>Analysis Methods and Recommendations</u></a></li>
+  <li><a href="#iso-area-vs-buffer" id="toc-iso-area-vs-buffer" class="nav-link" data-scroll-target="#iso-area-vs-buffer"><u>Iso-area vs Buffer</u></a>
+  <ul class="collapse">
+  <li><a href="#te22a-founders-memorial" id="toc-te22a-founders-memorial" class="nav-link" data-scroll-target="#te22a-founders-memorial"><u><strong>TE22A: Founder's Memorial</strong></u></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">analysis</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="analysis-methods-and-recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-methods-and-recommendations"><u>Analysis Methods and Recommendations</u></h2>
+<p>For our analysis, our group will be analysing both the target audience served and the efficiency of each TEL stage 4 individually.</p>
+<p>To analyse the target audience served, our group analyzed the type of buildings and residents living within each walkable iso-area created. We then gathered information about the cost of construction and population's utilization of within each MRT Station to determine whether the cost of development outweighs its benefits to taxpayers and if there is sufficient utilization of MRT services to justify the construction of the MRT Station. We have also taken into consideration future developments that will take place within each area before arriving at our decision.</p>
+<p>To measure the efficiency, our group has come up with a calculation to measure the efficiency, which we have dubbed the walkability probability. To do this, we first find the ratio of buildings in each iso-area band compared to the total number of buildings in the iso-area. To simplify the process, we assumed that the closest point to the MRT station would be considered. For instance, if building A spans both the 200 – 400m band and the 400 – 600m band, we would assume that it was part of the 200 – 400m band.</p>
+<p>Next, our group took reference from Olszewski and Wibowo (2005)&nbsp;to determine the penalisation score for each band. The penalisation score is used to calculate the expected likelihood of a person walking to the MRT station. As Figure 1 shows, men and women have different probabilities of walking to the MRT. Hence, our group has taken the approximate average of the two probabilities and applied it as the penalisation score.</p>
+<p><img src="images/paste-317DC0D0.png" class="img-fluid"></p>
+<p>Olszewski, P., &amp; Wibowo, S. S. (2005). Using equivalent walking distance to assess pedestrian accessibility to transit stations in Singapore. <em>Transportation Research Record: Journal of the Transportation Research Board, 1927(1), 38–45. https://doi.org/10.1177/0361198105192700105</em></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Iso-area band range</th>
+<th>Penalty</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0-200m</td>
+<td>0.9</td>
+</tr>
+<tr class="even">
+<td>200-400m</td>
+<td>0.8</td>
+</tr>
+<tr class="odd">
+<td>400-600m</td>
+<td>0.6</td>
+</tr>
+<tr class="even">
+<td>600-800m</td>
+<td>0.4</td>
+</tr>
+</tbody>
+</table>
+<p>The expected likelihood of people walking would be derived through this formula:</p>
+<p>No of buildings in Iso-area band _____________________________________ x Penalty</p>
+<p>Total number of buildings in iso-area</p>
+<p>After which, the expected likelihood of people walking would be added across all bands and from there, the total walkability probability would be derived.We will consider an MRT station to be efficient if it has a walkability probability of over 50%. Afterwards, we will consider any possible outside factors which could reduce the effectiveness of the MRT station.Using this calculation, our group will not only be able to calculate the expected efficiency of each MRT station according to the probability that someone will walk to the station, or the walkability probability, but we will also be able to analyse the proportion of buildings in each band and identify the band with the highest walkability probability.</p>
+</section>
+<section id="iso-area-vs-buffer" class="level2">
+<h2 class="anchored" data-anchor-id="iso-area-vs-buffer"><u>Iso-area vs Buffer</u></h2>
+<p>Before we discuss our findings, the group would like to explain our choice to use iso-area to depict the catchment area of TEL stage 4 stations instead of buffer.</p>
+<p>A buffer area is the most common way to delineate a catchment area. It measures a Euclidean distance away from the point given. However, this convenience comes with some issue. Using Euclidean distances which is essentially a straight line can be quite misleading and impractical.</p>
+<p>A more credible and realistic approach to delineate the catchment area would be to use network distance i.e., the shortest distance approach. The method that provides this approach is Iso-Areas as Polygons (from Layer). The iso areas are mapped onto the walkable paths by Singaporeans hence it is more accurate. In all, a buffer is not used because in reality, a person cannot always travel in a straight line towards their destination but will have to turn at bends and curves depending on their walking paths.</p>
+<section id="te22a-founders-memorial" class="level3">
+<h3 class="anchored" data-anchor-id="te22a-founders-memorial"><u><strong>TE22A: Founder's Memorial</strong></u></h3>
+<p><img src="images/paste-691A473F.png" class="img-fluid"></p>
+<p><strong>Background</strong></p>
+<p>Located between Tanjong Rhu and Gardens by the Bay stations along the TEL, Founders Memorial MRT station was meant to improve accessibility for visitors to the Bay East Garden, where the memorial will be located. The station is built to serve expected upcoming residential and recreational developments in the area and showcase the contributions of modern Singapore’s founders.</p>
+<p>The China Railway First Group Co, Ltd was awarded the contract of S$242.4 million in June 2016 for the conversion of the existing TEL facility building at Bay East Garden to build the Founders’ Memorial Station, where construction begins in 2019.</p>
+<p>With future development plan to be completed in 2025, the memorial site will be housed in a garden, within which an indoor gallery will be built. There will likely be permanent and temporary galleries, as well as a visitor center and multi-purpose rooms which could host school excursions and citizenship ceremonies.</p>
+<p><strong>Target Audience</strong></p>
+<p>The expected target audience of the Founder's Memorial is likely to be visitors, school students, small group of private residences and for ceremonies purposes. As clear plans for development of the area have not yet been planned, it is remains unclear the exact future target audience, such as residential buildings or commercial buildings.</p>
+<p><img src="images/paste-258F4FCA.png" class="img-fluid"></p>
+<p>Nonetheless, at the current moment there are some private residences which fall within the iso-area created. 67% of all buildings which fall within the iso-area are private residential buildings. With reference to Google Street View, we can see that these buildings are condominiums within Tanjong Rhu, which lies across East Coast Parkway.</p>
+<p><img src="images/paste-4DD4C089.png" class="img-fluid" width="317"><img src="images/paste-887FB9D5.png" class="img-fluid" width="186"></p>
+<p><strong>Efficiency</strong></p>
+<p>Based on current developments in the area, we have calculated the following:</p>
+<p>From the calculations, we can see that at the current state of development at Founders' Memorial, the station has a poor walkability probability of 43.33%, which is the lowest out of all stations analysed and below the threshold set by our group. Furthermore, the greatest</p>
+<p>&nbsp;</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
